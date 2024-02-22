@@ -4,7 +4,8 @@ import logging
 
 #logging string
 
-logging.basicConfig(Level=logging.INFO,format='[%(asctime)s]: %(message)s:')
+logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
+
 
 project_name= 'cnnclassifier'
 
@@ -27,9 +28,10 @@ list_of_files= [
     "templates/index.html"
 ]
 
+
 for filepath in list_of_files:
-    filepath=Path(list_of_files)
-    filedir,filename=os.path.split(filepath)
+    filepath = Path(filepath)
+    filedir, filename = os.path.split(filepath)
 
     if filedir !="":
         os.makedirs(filedir,exist_ok=True)
